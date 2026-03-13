@@ -6,119 +6,287 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Jawwad Ayyubi</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description"
-		content="Here is Jawwad Ayyubi's personal website. Browse through his different achievements and projects he has worked on." />
-	<meta name="keywords"
-		content="jawwad ayyubi, jawwad, ayyubi, codekali, Neural Source Code Desciptor, Source Code Summarization" />
+	<meta name="description" content="Jawwad Ayyubi — Senior .NET Developer and Team Lead with 5+ years of experience in ASP.NET Core, Azure, SQL Server, and enterprise application development." />
+	<meta name="keywords" content="jawwad ayyubi, jawwad, ayyubi, codekali, .NET developer, ASP.NET Core, Azure, SQL Server, Neural Source Code Descriptor, NLP, deep learning" />
 	<meta name="author" content="Jawwad A. Ayyubi" />
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
-
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
 
-	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Flaticons  -->
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-	<!-- Github Calender -->
 	<link rel="stylesheet" href="css/github-calendar.css">
-	<!-- Modernizr JS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+		/* ---- Typography & readability fixes ---- */
+		.colorlib-narrow-content p,
+		.colorlib-narrow-content li,
+		.timeline-label p,
+		.timeline-label li,
+		.panel-body p,
+		.panel-body li {
+			font-size: 15.5px !important;
+			line-height: 1.85 !important;
+			color: #3a3a3a !important;
+		}
+		/* Tone down wide letter-spacing on section headings */
+		.colorlib-heading,
+		h2.colorlib-heading {
+			letter-spacing: 1px !important;
+			font-size: 28px !important;
+			color: #1a1a2e !important;
+		}
+		.heading-meta {
+			letter-spacing: 3px !important;
+			font-size: 11px !important;
+			color: teal !important;
+		}
+		/* About section - full width */
+		.colorlib-about .about-desc p {
+			font-size: 16px !important;
+			line-height: 1.9 !important;
+			color: #444 !important;
+		}
+		/* Sidebar mobile toggle bar color on dark bg */
+		.js-colorlib-nav-toggle i,
+		.js-colorlib-nav-toggle i::before,
+		.js-colorlib-nav-toggle i::after {
+			background: #a0b4c8 !important;
+		}
+	</style>
 </head>
 
 <body>
 	<div id="colorlib-page">
 		<div>
-			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
-				aria-expanded="false" aria-controls="navbar"><i></i></a>
-			<aside id="colorlib-aside" role="complementary" class="border"
-				style="height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+			<a class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+			<aside id="colorlib-aside" role="complementary" class="border" style="height: 100vh; display: flex; flex-direction: column; justify-content: space-between; background: #0d1b2a !important; border-color: #1b2a3b !important;">
 				<div>
 					<div class="text-center">
 						<div class="author-img" style="background-image: url(images/profile.jpg);"></div>
-						<h1 id="colorlib-logo"><a href="index.html">Jawwad A. Ayyubi</a></h1>
-						<span class="position">Full Stack Developer and Deep Learning Enthusiast</span>
+						<h1 id="colorlib-logo"><a href="index.html" style="color:#ffffff !important;">Jawwad A. Ayyubi</a></h1>
+						<span class="position" style="color:#a0b4c8 !important;">Senior .NET Developer &amp; Team Lead</span>
 					</div>
 
+					<style>
+						#colorlib-aside #colorlib-main-menu ul li a {
+							color: #a0b4c8 !important;
+							letter-spacing: 1.5px;
+							font-size: 13px;
+							transition: color 0.2s;
+						}
+						#colorlib-aside #colorlib-main-menu ul li a:hover,
+						#colorlib-aside #colorlib-main-menu ul li.active a {
+							color: teal !important;
+						}
+						#colorlib-aside .js-colorlib-nav-toggle span,
+						#colorlib-aside .js-colorlib-nav-toggle span::before,
+						#colorlib-aside .js-colorlib-nav-toggle span::after {
+							background: #a0b4c8;
+						}
+					</style>
 					<nav id="colorlib-main-menu" role="navigation" class="navbar mt-4">
 						<div id="navbar" class="collapse">
 							<ul>
-								<li><a href="#" data-nav-section="home">Home</a></li>
-								<li class="active"><a href="#" data-nav-section="about">About</a></li>
-								<li><a href="#" data-nav-section="services">Expertise</a></li>
-								<li><a href="#" data-nav-section="skills">Skills</a></li>
-								<li><a href="#" data-nav-section="education">Education</a></li>
-								<li><a href="#" data-nav-section="experience">Experience</a></li>
-								<li><a href="#" data-nav-section="work">Projects</a></li>
-								<li><a href="#" data-nav-section="contact">Contact</a></li>
+								<li><a data-nav-section="home">Home</a></li>
+								<li class="active"><a data-nav-section="about">About</a></li>
+								<li><a data-nav-section="services">Expertise</a></li>
+								<li><a data-nav-section="skills">Skills</a></li>
+								<li><a data-nav-section="education">Education</a></li>
+								<li><a data-nav-section="experience">Experience</a></li>
+								<li><a data-nav-section="work">Projects</a></li>
+								<li><a data-nav-section="certifications">Certifications</a></li>
+								<li><a data-nav-section="contact">Contact</a></li>
 							</ul>
 						</div>
 					</nav>
 				</div>
 
-				<!-- Bottom-pinned link -->
-				<div class="text-center p-3">
-					<a href="./velocity-ui/index.html" target="_blank" rel="noopener" class="text-muted">
-						<b style="color: rgb(0, 42, 87)">VelocityUI js ↗</b>
-					</a>
+				<div style="padding: 0 0 18px 0;">
+					<!-- Social Icons -->
+					<div class="text-center" style="margin-bottom: 12px;">
+						<a href="https://github.com/codekali" target="_blank" title="GitHub" style="display:inline-block;margin:0 5px;width:34px;height:34px;line-height:32px;border-radius:50%;border:1.5px solid teal;color:teal;font-size:15px;text-align:center;transition:all 0.25s;" onmouseover="this.style.background='teal';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='teal';"><i class="fab fa-github"></i></a>
+						<a href="https://www.linkedin.com/in/jawwad-ayyubi-/" target="_blank" title="LinkedIn" style="display:inline-block;margin:0 5px;width:34px;height:34px;line-height:32px;border-radius:50%;border:1.5px solid teal;color:teal;font-size:15px;text-align:center;transition:all 0.25s;" onmouseover="this.style.background='teal';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='teal';"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://www.instagram.com/ja_ibn_matiullah" target="_blank" title="Instagram" style="display:inline-block;margin:0 5px;width:34px;height:34px;line-height:32px;border-radius:50%;border:1.5px solid teal;color:teal;font-size:15px;text-align:center;transition:all 0.25s;" onmouseover="this.style.background='teal';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='teal';"><i class="fab fa-instagram"></i></a>
+					</div>
+					<!-- VelocityUI link -->
+					<div class="text-center">
+						<a href="./velocity-ui/index.html" target="_blank" rel="noopener">
+							<b style="color: #a0b4c8; font-size: 13px;">VelocityUI js &#x2197;</b>
+						</a>
+					</div>
 				</div>
 			</aside>
 
 			<div id="colorlib-main">
-				<section id="colorlib-hero" class="js-fullheight" data-section="home">
-					<div class="flexslider js-fullheight">
-						<ul class="slides">
-							<li style="background-image: url(images/bg_photo.jpg);">
-								<div class="overlay"></div>
-								<div class="container-fluid">
-									<div class="row">
-										<div
-											class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-											<div class="slider-text-inner js-fullheight">
-												<div class="desc">
-													<h1 style="color: teal">Hello <br>I'm Jawwad</h1>
-													<h3 style="color: teal">Connect with me on!</h3>
-													<a href="https://github.com/codekali" target="_blank"><i
-															style="color: teal" class="fab fa-3x fa-github"></i></a>
-													<a href="https://www.linkedin.com/in/jawwad-ayyubi-/"
-														target="_blank"><i style="color: teal"
-															class="fab fa-3x fa-linkedin"></i></a>
-													<a href="https://www.facebook.com/jawwad.ayyubi" target="_blank"><i
-															style="color: teal" class="fab fa-3x fa-facebook"></i></a>
-													<a href="https://www.instagram.com/ja_ayyubi/" target="_blank"><i
-															style="color: teal" class="fab fa-3x fa-instagram"></i></a>
-													<br><br>
-													<p><a class="btn btn-primary btn-learn" href="docs/resume.pdf"
-															target="_blank">Download Resume <i
-																class="fas fa-download"></i></a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+
+				<!-- HOME -->
+				<section id="colorlib-hero" class="js-fullheight" data-section="home" style="position:relative;overflow:hidden;background: linear-gradient(#0d1b2a 45%, #313F4E 65%, #5F6D7C 85%, #F6FFFF 100%);">
+
+					<style>
+						#colorlib-hero .hero-inner {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							height: 100vh;
+							padding: 0 60px;
+							position: relative;
+							z-index: 2;
+						}
+						#colorlib-hero .hero-text {
+							flex: 1;
+							max-width: 520px;
+						}
+						#colorlib-hero .hero-text .hero-tag {
+							display: inline-block;
+							background: rgba(0,128,128,0.15);
+							border: 1px solid rgba(0,128,128,0.4);
+							color: teal;
+							font-size: 12px;
+							letter-spacing: 3px;
+							text-transform: uppercase;
+							padding: 6px 16px;
+							border-radius: 20px;
+							margin-bottom: 24px;
+						}
+						#colorlib-hero .hero-text h1 {
+							font-size: 62px;
+							font-weight: 700;
+							color: #ffffff;
+							line-height: 1.1;
+							margin: 0 0 12px 0;
+							font-family: 'Playfair Display', serif;
+						}
+						#colorlib-hero .hero-text h1 span {
+							color: teal;
+						}
+						#colorlib-hero .hero-text h3 {
+							font-size: 20px;
+							color: #a0b4c8;
+							font-weight: 400;
+							margin: 0 0 18px 0;
+							letter-spacing: 0.5px;
+						}
+						#colorlib-hero .hero-text .hero-divider {
+							width: 50px;
+							height: 3px;
+							background: teal;
+							margin: 0 0 28px 0;
+							border-radius: 2px;
+						}
+						#colorlib-hero .hero-text .hero-desc {
+							font-size: 17px;
+							color: #7a90a4;
+							line-height: 1.7;
+							margin-bottom: 36px;
+							max-width: 420px;
+						}
+						#colorlib-hero .hero-text .hero-btn {
+							display: inline-block;
+							background: teal;
+							color: #fff;
+							padding: 13px 32px;
+							border-radius: 4px;
+							font-size: 13px;
+							font-weight: 600;
+							letter-spacing: 1.5px;
+							text-transform: uppercase;
+							text-decoration: none;
+							transition: background 0.25s, transform 0.2s;
+							border: none;
+						}
+						#colorlib-hero .hero-text .hero-btn:hover {
+							background: #007070;
+							transform: translateY(-2px);
+							text-decoration: none;
+							color: #fff;
+						}
+						#colorlib-hero .hero-photo {
+							flex: 0 0 420px;
+							height: 100vh;
+							position: relative;
+							display: flex;
+							align-items: flex-end;
+							justify-content: center;
+						}
+						#colorlib-hero .hero-photo img {
+							max-height: 90vh;
+							width: auto;
+							object-fit: contain;
+							object-position: bottom;
+							display: block;
+							position: relative;
+							z-index: 2;
+							filter: drop-shadow(0 0 40px rgba(0,0,0,0.6));
+						}
+						#colorlib-hero .hero-photo::before {
+							content: '';
+							position: absolute;
+							left: 0;
+							top: 0;
+							width: 120px;
+							height: 100%;
+							background: linear-gradient(to right, #0d1b2a, transparent);
+							z-index: 3;
+						}
+						#colorlib-hero .hero-photo::after {
+							content: '';
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							height: 200px;
+							background: linear-gradient(to top, #0d1b2a, transparent);
+							z-index: 3;
+						}
+						/* Subtle background grid pattern */
+						#colorlib-hero::before {
+							content: '';
+							position: absolute;
+							inset: 0;
+							background-image: radial-gradient(rgba(0,128,128,0.06) 1px, transparent 1px);
+							background-size: 40px 40px;
+							z-index: 1;
+						}
+						@media (max-width: 768px) {
+							#colorlib-hero .hero-inner { padding: 40px 24px; flex-direction: column; justify-content: center; }
+							#colorlib-hero .hero-text h1 { font-size: 38px; }
+							#colorlib-hero .hero-photo { display: none; }
+						}
+					</style>
+
+					<div class="hero-inner">
+						<div class="hero-text">
+							<span class="hero-tag">&#x1F44B; Welcome to my portfolio</span>
+							<h1>Hi, I'm <span>Jawwad</span><br>Ayyubi</h1>
+							<h3>Senior .NET Developer &amp; Team Lead</h3>
+							<div class="hero-divider"></div>
+							<p class="hero-desc">5+ years building scalable enterprise systems with .NET Core, Azure, and SQL Server. Based in Hyderabad, India.</p>
+							<a class="hero-btn" href="docs/resume.pdf" target="_blank">
+								<i class="fas fa-download" style="margin-right:8px;"></i> Download Resume
+							</a>
+						</div>
+						<div class="hero-photo">
+							<!-- Replace hero_photo.jpg with your new portrait image -->
+							<img src="images/hero_photo.jpg" alt="Jawwad Ayyubi" onerror="this.parentElement.style.display='none'">
+						</div>
 					</div>
 				</section>
 
+				<!-- ABOUT -->
 				<section class="colorlib-about" data-section="about">
 					<div class="colorlib-narrow-content">
 						<div class="row">
@@ -128,16 +296,8 @@
 										<div class="about-desc">
 											<span class="heading-meta">About</span>
 											<h2 class="colorlib-heading">Who Am I?</h2>
-											<p><strong>Hi I'm Jawwad Ayyubi</strong> I'm a Computer engineer from
-												Ranchi, India. I was always passionate about computer programming and
-												development. I've developed several websites and a couple of mobile
-												applications. I'm very enthusiastic about Deep Learning and finding my
-												way into it. I'm passionate about Natural Language Processing in
-												particular. I am very comfortable with multitasking and love working in
-												flexible hours. </p>
-											<p>I'm a hard working man with great focus on a work. I'm currently looking
-												for a job as a Machine Learning developer which can leverage my
-												knowledge, understanding and experience in this field. </p>
+											<p><strong>Hi, I'm Jawwad Ayyubi</strong> — a Senior .NET Developer and Team Lead based in Hyderabad, India, with 5+ years of experience designing and delivering scalable, secure, and high-performance enterprise applications. I specialise in .NET Core, ASP.NET Core, RESTful APIs, cloud architecture on Microsoft Azure, and SQL Server optimisation.</p>
+											<p>Beyond enterprise development, I have a deep passion for Machine Learning and Natural Language Processing. I've published research on Neural Source Code Summarization and continue to explore the intersection of software engineering and deep learning. I thrive in Agile environments, enjoy mentoring teams, and love tackling complex engineering problems with clean, principled solutions.</p>
 										</div>
 									</div>
 								</div>
@@ -146,13 +306,11 @@
 					</div>
 				</section>
 
-
-
+				<!-- EXPERTISE -->
 				<section class="colorlib-services" data-section="services">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 								<span class="heading-meta">What I do?</span>
 								<h2 class="colorlib-heading">Here are some of my expertise</h2>
 							</div>
@@ -160,68 +318,55 @@
 						<div class="row row-pt-md">
 							<div class="col-md-4 text-center animate-box">
 								<div class="services color-1">
-									<span class="icon">
-										<i class="icon-bulb"></i>
-									</span>
+									<span class="icon"><i class="icon-layers2"></i></span>
 									<div class="desc">
-										<h3>Innovative Ideas</h3>
-										<p>Ponder over my work to do have an innovative approach</p>
+										<h3>Backend Engineering</h3>
+										<p>Building scalable, secure enterprise applications using .NET Core, ASP.NET MVC, and RESTful Web APIs with SOLID principles and design patterns.</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 text-center animate-box">
 								<div class="services color-2">
-									<span class="icon">
-										<i class="icon-data"></i>
-									</span>
+									<span class="icon"><i class="icon-data"></i></span>
 									<div class="desc">
-										<h3>Programming</h3>
-										<p>Regular competitive programmer of Data Structure and Algorithm</p>
+										<h3>Cloud &amp; DevOps</h3>
+										<p>Designing and deploying Azure-based cloud solutions — Azure Functions, SQL, Blob Storage, RabbitMQ — with CI/CD pipelines via Azure DevOps.</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 text-center animate-box">
 								<div class="services color-3">
-									<span class="icon">
-										<i class="icon-probot"></i>
-									</span>
+									<span class="icon"><i class="icon-probot"></i></span>
 									<div class="desc">
-										<h3>Deep Learning</h3>
-										<p>Immersed into researching Natural Language Processing concepts</p>
+										<h3>Deep Learning &amp; NLP</h3>
+										<p>Researching and applying Natural Language Processing and ML models; published work on Neural Source Code Summarization.</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 text-center animate-box">
 								<div class="services color-4">
-									<span class="icon">
-										<i class="icon-layers2"></i>
-									</span>
+									<span class="icon"><i class="icon-bulb"></i></span>
 									<div class="desc">
-										<h3>Graphic Design</h3>
-										<p>Design logos, book covers and posters as a hobby on Adobe illustrator</p>
+										<h3>Database &amp; SQL</h3>
+										<p>SQL Server optimisation, SSIS data migration pipelines, SSRS reporting, and MongoDB with repository patterns.</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 text-center animate-box">
 								<div class="services color-5">
-									<span class="icon">
-										<i class="icon-data"></i>
-									</span>
+									<span class="icon"><i class="icon-data"></i></span>
 									<div class="desc">
-										<h3>Web development</h3>
-										<p>Develop websites, both front-end and back-end on many different web stacks.
-										</p>
+										<h3>Web Development</h3>
+										<p>Full-stack web development with Angular, HTML5, CSS3, Bootstrap, and KendoUI for enterprise-grade front-end interfaces.</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 text-center animate-box">
 								<div class="services color-6">
-									<span class="icon">
-										<i class="icon-phone3"></i>
-									</span>
+									<span class="icon"><i class="icon-pen2"></i></span>
 									<div class="desc">
-										<h3>Mobile Application</h3>
-										<p>Develop small hybrid mobile applications using phonegap technologies.</p>
+										<h3>Team Leadership</h3>
+										<p>Leading engineering teams, conducting code reviews, mentoring junior developers, and driving Agile best practices across projects.</p>
 									</div>
 								</div>
 							</div>
@@ -229,204 +374,138 @@
 					</div>
 				</section>
 
-				<div id="colorlib-counter" class="colorlib-counters"
-					style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
+				<!-- COUNTERS -->
+				<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
 					<div class="overlay"></div>
 					<div class="colorlib-narrow-content">
 						<div class="row">
-						</div>
-						<div class="row">
 							<div class="col-md-3 text-center animate-box">
-								<span class="colorlib-counter js-counter" data-from="0" data-to="3" data-speed="3000"
-									data-refresh-interval="50"></span>
-								<span class="colorlib-counter-label">Internships</span>
+								<span class="colorlib-counter js-counter" data-from="0" data-to="5" data-speed="3000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Years of Experience</span>
 							</div>
 							<div class="col-md-3 text-center animate-box">
-								<span class="colorlib-counter js-counter" data-from="0" data-to="7" data-speed="3000"
-									data-refresh-interval="50"></span>
-								<span class="colorlib-counter-label">Projects</span>
+								<span class="colorlib-counter js-counter" data-from="0" data-to="10" data-speed="3000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Projects Delivered</span>
 							</div>
 							<div class="col-md-3 text-center animate-box">
-								<span class="colorlib-counter js-counter" data-from="0" data-to="35" data-speed="3000"
-									data-refresh-interval="50"></span>
-								<span class="colorlib-counter-label">Designs</span>
+								<span class="colorlib-counter js-counter" data-from="0" data-to="1" data-speed="3000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Published Research Paper</span>
 							</div>
 							<div class="col-md-3 text-center animate-box">
-								<span class="colorlib-counter js-counter" data-from="0" data-to="3" data-speed="3000"
-									data-refresh-interval="50"></span>
-								<span class="colorlib-counter-label">Years of self Experience</span>
+								<span class="colorlib-counter js-counter" data-from="0" data-to="75" data-speed="3000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">% Latency Reduced</span>
 							</div>
 						</div>
 					</div>
 				</div>
 
+				<!-- SKILLS -->
 				<section class="colorlib-skills" data-section="skills">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 								<span class="heading-meta">My Specialty</span>
 								<h2 class="colorlib-heading animate-box">My Skills</h2>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-								<p>I have developed varied skills over the years to support my work and my personality.
-									I've worked on many different web frameworks. I have a good knowledge of Data
-									structures and algorithms. </p>
+								<p>Over 5+ years of professional experience, I've built deep expertise across backend engineering, cloud, databases, and frontend technologies, while also nurturing a strong interest in machine learning and NLP.</p>
 							</div>
+
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 								<div class="progress-wrap">
-									<h3>C++</h3>
-									<div class="progress">
-										<div class="progress-bar color-1" role="progressbar" aria-valuenow="70"
-											aria-valuemin="0" aria-valuemax="100" style="width:70%">
-											<span>70%</span>
-										</div>
-									</div>
+									<h3>C# / .NET Core</h3>
+									<div class="progress"><div class="progress-bar color-1" role="progressbar" style="width:90%"><span>90%</span></div></div>
 								</div>
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 								<div class="progress-wrap">
-									<h3>Java</h3>
-									<div class="progress">
-										<div class="progress-bar color-2" role="progressbar" aria-valuenow="45"
-											aria-valuemin="0" aria-valuemax="100" style="width:45%">
-											<span>45%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="progress-wrap">
-									<h3>Python(PyTorch)</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="progress-wrap">
-									<h3>Neural Networks(RNN)</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-										</div>
-									</div>
+									<h3>ASP.NET Core / MVC / Web API</h3>
+									<div class="progress"><div class="progress-bar color-2" role="progressbar" style="width:90%"><span>90%</span></div></div>
 								</div>
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 								<div class="progress-wrap">
-									<h3>HTML5</h3>
-									<div class="progress">
-										<div class="progress-bar color-3" role="progressbar" aria-valuenow="80"
-											aria-valuemin="0" aria-valuemax="100" style="width:80%">
-											<span>80%</span>
-										</div>
-									</div>
+									<h3>SQL Server / Database Optimisation</h3>
+									<div class="progress"><div class="progress-bar color-3" role="progressbar" style="width:80%"><span>80%</span></div></div>
 								</div>
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 								<div class="progress-wrap">
-									<h3>CSS3</h3>
-									<div class="progress">
-										<div class="progress-bar color-4" role="progressbar" aria-valuenow="75"
-											aria-valuemin="0" aria-valuemax="100" style="width:75%">
-											<span>75%</span>
-										</div>
-									</div>
+									<h3>Microsoft Azure (Functions, SQL, Blob)</h3>
+									<div class="progress"><div class="progress-bar color-4" role="progressbar" style="width:60%"><span>60%</span></div></div>
 								</div>
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 								<div class="progress-wrap">
-									<h3>Javascript jQuery</h3>
-									<div class="progress">
-										<div class="progress-bar color-5" role="progressbar" aria-valuenow="40"
-											aria-valuemin="0" aria-valuemax="100" style="width:40%">
-											<span>40%</span>
-										</div>
-									</div>
+									<h3>SSIS / SSRS</h3>
+									<div class="progress"><div class="progress-bar color-5" role="progressbar" style="width:85%"><span>85%</span></div></div>
 								</div>
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 								<div class="progress-wrap">
 									<h3>Angular</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="50%"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-										</div>
-									</div>
+									<div class="progress"><div class="progress-bar color-6" role="progressbar" style="width:50%"><span>50%</span></div></div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="progress-wrap">
+									<h3>HTML5 / CSS3</h3>
+									<div class="progress"><div class="progress-bar color-3" role="progressbar" style="width:80%"><span>80%</span></div></div>
 								</div>
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 								<div class="progress-wrap">
-									<h3>Bootstrap</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
-											aria-valuemin="0" aria-valuemax="100" style="width:80%">
-											<span>80%</span>
-										</div>
-									</div>
+									<h3>Bootstrap / KendoUI</h3>
+									<div class="progress"><div class="progress-bar color-4" role="progressbar" style="width:80%"><span>80%</span></div></div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="progress-wrap">
+									<h3>C++</h3>
+									<div class="progress"><div class="progress-bar color-1" role="progressbar" style="width:80%"><span>80%</span></div></div>
 								</div>
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 								<div class="progress-wrap">
-									<h3>PHP</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="45"
-											aria-valuemin="0" aria-valuemax="100" style="width:45%">
-											<span>45%</span>
-										</div>
-									</div>
+									<h3>Python (PyTorch / ML)</h3>
+									<div class="progress"><div class="progress-bar color-6" role="progressbar" style="width:65%"><span>65%</span></div></div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="progress-wrap">
+									<h3>MongoDB</h3>
+									<div class="progress"><div class="progress-bar color-5" role="progressbar" style="width:40%"><span>40%</span></div></div>
 								</div>
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 								<div class="progress-wrap">
-									<h3>NODEjs</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="45"
-											aria-valuemin="0" aria-valuemax="100" style="width:45%">
-											<span>45%</span>
-										</div>
-									</div>
+									<h3>PHP / MySQL</h3>
+									<div class="progress"><div class="progress-bar color-6" role="progressbar" style="width:65%"><span>65%</span></div></div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="progress-wrap">
+									<h3>JavaScript / jQuery</h3>
+									<div class="progress"><div class="progress-bar color-2" role="progressbar" style="width:80%"><span>80%</span></div></div>
 								</div>
 							</div>
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 								<div class="progress-wrap">
-									<h3>MySQL</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
-											aria-valuemin="0" aria-valuemax="100" style="width:80%">
-											<span>80%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="progress-wrap">
-									<h3>Adobe illustrator</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="60"
-											aria-valuemin="0" aria-valuemax="100" style="width:60%">
-											<span>60%</span>
-										</div>
-									</div>
+									<h3>Adobe Illustrator(Hobby)</h3>
+									<div class="progress"><div class="progress-bar color-6" role="progressbar" style="width:60%"><span>60%</span></div></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
+				<!-- EDUCATION -->
 				<section class="colorlib-education" data-section="education">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 								<h2 class="colorlib-heading animate-box">Education</h2>
 							</div>
 						</div>
@@ -437,56 +516,45 @@
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="headingOne">
 												<h4 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseOne" aria-expanded="true"
-														aria-controls="collapseOne"><strong>2016 - 2020
-														</strong>Bachelor of Technology in Computer Engineering
+													<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+														<strong>2016 &ndash; 2020</strong> &nbsp; Bachelor of Technology in Computer Engineering
 													</a>
 												</h4>
 											</div>
-											<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-												aria-labelledby="headingOne">
+											<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 												<div class="panel-body">
 													<strong>Aligarh Muslim University, Aligarh</strong>
-													<p>Final Year Computer Engineering student with a decent CGPA.</p>
+													<p>Graduated in the 2020 batch with a B.Tech in Computer Engineering. Relevant coursework included Data Structures &amp; Algorithms, OOP, Operating Systems, Database Systems, Compiler Design, Machine Learning, and Software Engineering.</p>
 												</div>
 											</div>
 										</div>
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="headingTwo">
 												<h4 class="panel-title">
-													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseTwo" aria-expanded="false"
-														aria-controls="collapseTwo"><strong>2013 - 2015 </strong>High
-														School
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+														<strong>2013 &ndash; 2015</strong> &nbsp; High School
 													</a>
 												</h4>
 											</div>
-											<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingTwo">
+											<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 												<div class="panel-body">
 													<strong>Kairali School, Ranchi</strong>
-													<p>Passed high school with a percentage of <strong>93.2%</strong>
-														marks. Received a prize for scoring the highest in Physics</p>
+													<p>Passed high school with a percentage of <strong>93.2%</strong>. Received a prize for scoring the highest in Physics.</p>
 												</div>
 											</div>
 										</div>
 										<div class="panel panel-default">
 											<div class="panel-heading" role="tab" id="headingThree">
 												<h4 class="panel-title">
-													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-														href="#collapseThree" aria-expanded="false"
-														aria-controls="collapseThree"><strong>2012 - 2013
-														</strong>Secondary School
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+														<strong>2012 &ndash; 2013</strong> &nbsp; Secondary School
 													</a>
 												</h4>
 											</div>
-											<div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-												aria-labelledby="headingThree">
+											<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 												<div class="panel-body">
 													<strong>St. Thomas School, Ranchi</strong>
-													<p>Passed secondary school with a percentage of
-														<strong>83.8%</strong> marks.</p>
+													<p>Passed secondary school with a percentage of <strong>83.8%</strong>.</p>
 												</div>
 											</div>
 										</div>
@@ -497,168 +565,305 @@
 					</div>
 				</section>
 
+				<!-- EXPERIENCE -->
 				<section class="colorlib-experience" data-section="experience">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 								<span class="heading-meta">Experience</span>
-								<h2 class="colorlib-heading animate-box">Internships</h2>
+								<h2 class="colorlib-heading animate-box">Work Experience</h2>
 							</div>
 						</div>
+
+						<!-- Professional roles label -->
+						<div class="row" style="margin-bottom: 10px;">
+							<div class="col-md-12">
+								<h4 style="border-left: 4px solid teal; padding-left: 12px; color: teal; margin-bottom: 20px;">
+									<i class="fas fa-briefcase" style="margin-right: 8px;"></i> Full-Time Professional Experience
+								</h4>
+							</div>
+						</div>
+
 						<div class="row">
 							<div class="col-md-12">
 								<div class="timeline-centered">
+
 									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 										<div class="timeline-entry-inner">
-
-											<div class="timeline-icon color-1">
-												<i class="icon-pen2"></i>
-											</div>
-
+											<div class="timeline-icon color-1"><i class="icon-pen2"></i></div>
 											<div class="timeline-label">
-												<h2><a href="#">.NET Developer</a> <span>June 2019 - July 2019</span>
-												</h2>
-												<p>I was assigned to develop an online proposal maker platform for
-													various purposes using ASP.NET Core on MVC architecture.</p>
+												<h2><a>Senior Software Engineer &amp; Team Lead</a> <span>Aug 2022 &ndash; Present</span></h2>
+												<p><em>Enterprise Software Company, Hyderabad, India</em></p>
+												<ul>
+													<li>Designed and developed scalable enterprise applications using ASP.NET Core, ASP.NET MVC, and .NET 6/8.</li>
+													<li>Led architecture of a Portfolio Management System, reducing latency by <strong>75%</strong> via optimised SQL queries and server-side paging, and strengthened security with CSP Level 3.</li>
+													<li>Architected and redesigned a Law Enforcement DUI/DWI Reporting System and SAFV Portal (C#, .NET 6, SSIS, SSRS), improving ETL efficiency by <strong>60%</strong> via optimised SQL and SSIS pipelines.</li>
+													<li>Built secure RESTful APIs using ASP.NET Web API with JWT Authentication; extended .NET Identity for advanced RBAC and module-level authorization.</li>
+													<li>Designed and deployed serverless .NET Web APIs as Azure Functions integrated with Azure SQL, Blob Storage, and RabbitMQ — applying event-driven and secure cloud architecture principles.</li>
+													<li>Built a reusable utility library for SQL Server and MongoDB with repository patterns and datatype extensions to improve developer productivity across projects.</li>
+													<li>Implemented CI/CD pipelines using Azure DevOps and Git-based workflows.</li>
+													<li>Mentored junior developers and enforced Agile best practices, code reviews, and quality standards.</li>
+												</ul>
 											</div>
 										</div>
 									</article>
-
 
 									<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-2">
-												<i class="icon-pen2"></i>
-											</div>
+											<div class="timeline-icon color-2"><i class="icon-pen2"></i></div>
 											<div class="timeline-label">
-												<h2><a href="#">Mobile Application Developer</a> <span>June 2018 - July
-														2018</span></h2>
-												<p>Developed some parts of a mobile application named "APAC Learning
-													Tool" from a pre-existing web application using CORDOVA technology.
-												</p>
+												<h2><a>Associate Software Developer</a> <span>Jan 2021 &ndash; Jul 2022</span></h2>
+												<p><em>Enterprise Software Company, Hyderabad, India</em></p>
+												<ul>
+													<li>Implemented and customised .NET Identity for granular RBAC, secure token management, and module-level permissions.</li>
+													<li>Developed a .NET Core desktop Invoicing System integrated with Microsoft GP and automated with Hangfire; implemented a dynamic rule engine using C# expressions.</li>
+													<li>Created SSIS integrations and SSRS reports for large-scale data migration, enabling multiple legacy-to-modern transitions &mdash; reduced migration time from <strong>2 hours to 15 minutes</strong>.</li>
+													<li>Improved security and performance via SQL optimisation, secure cookie policies, and XSS/clickjacking protections by implementing CSP Level 3.</li>
+													<li>Collaborated with cross-functional teams to deliver production-ready features using Agile methodologies.</li>
+												</ul>
 											</div>
 										</div>
 									</article>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- Internships label -->
+						<div class="row" style="margin-top: 30px; margin-bottom: 10px;">
+							<div class="col-md-12">
+								<h4 style="border-left: 4px solid teal; padding-left: 12px; color: teal; margin-bottom: 20px;">
+									<i class="fas fa-graduation-cap" style="margin-right: 8px;"></i> Internships &amp; Early Experience
+								</h4>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="timeline-centered">
 
 									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-3">
-												<i class="icon-pen2"></i>
-											</div>
+											<div class="timeline-icon color-3"><i class="icon-pen2"></i></div>
 											<div class="timeline-label">
-												<h2><a href="#">Full Stack Developer</a> <span>2017-2018</span></h2>
-												<p>Fully developed a website for a health organisation
-													<strong>Navarpan.com</strong> on wordpress with payment integration
-												</p>
+												<h2><a>.NET Developer Intern</a> <span>Jun 2019 &ndash; Jul 2019</span></h2>
+												<p>Developed an online proposal maker platform using ASP.NET Core on MVC architecture.</p>
 											</div>
 										</div>
 									</article>
 
-									<article class="timeline-entry begin animate-box"
-										data-animate-effect="fadeInBottom">
+									<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-none">
+											<div class="timeline-icon color-4"><i class="icon-pen2"></i></div>
+											<div class="timeline-label">
+												<h2><a>Mobile Application Developer Intern</a> <span>Jun 2018 &ndash; Jul 2018</span></h2>
+												<p>Developed parts of a hybrid mobile application using CORDOVA technology from a pre-existing web application.</p>
 											</div>
 										</div>
 									</article>
+
+									<article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+										<div class="timeline-entry-inner"><div class="timeline-icon color-none"></div></div>
+									</article>
+
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
+				<!-- PROJECTS -->
 				<section class="colorlib-work" data-section="work">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+<span class="heading-meta">Undergraduate work
+		</span>
 								<h2 class="colorlib-heading animate-box">Projects</h2>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12">
 								<div class="timeline-centered">
+
 									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-1">
-												<i class="icon-pen2"></i>
-											</div>
+											<div class="timeline-icon color-1"><i class="icon-pen2"></i></div>
 											<div class="timeline-label">
-												<h2><a href="https://github.com/codekali/Neural-SC-Descriptor">Neural
-														Source Code Descriptor</a> <span>Aug 2019 - Present</span></h2>
-												<p>Working on creating a deep learning model which can relate between
-													Java methods and a one line description of it which can help
-													generate one line description of Java methods. Developed the model
-													using pre-trained t5 transformer model and then fine tuning it for
-													our dataset using PyTorch.</p>
+												<h2><a href="https://github.com/codekali/Neural-SC-Descriptor">Neural Source Code Descriptor</a> <span>Aug 2019 &ndash; Present</span></h2>
+												<p>Built an NLP model to summarise Java source code using a fine-tuned T5 transformer (PyTorch). Paper published in <strong>Springer Nature</strong> and presented at <strong>SIGMAA</strong>. The model generates one-line natural language descriptions of Java methods. <a href="https://link.springer.com/chapter/10.1007/978-981-97-6352-8_55" target="_blank" style="color:teal;"><i class="fas fa-external-link-alt"></i> View Published Paper</a></p>
 											</div>
 										</div>
 									</article>
-
 
 									<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-2">
-												<i class="icon-pen2"></i>
-											</div>
+											<div class="timeline-icon color-2"><i class="icon-pen2"></i></div>
 											<div class="timeline-label">
-												<h2>Web User Behaviour Analysis <span>Aug 2018 - Dec 2018</span></h2>
-												<p>Worked on mining a web server log to retrieve different informations
-													from it and generate reports of useful behaviours shown by users
-													which can help in the website optimization. Generation a lot of
-													graphical representaion of changing behaviour of users visiting a
-													website.</p>
+												<h2>Web Log Analyzer</h2>
+												<p>Built in C++ &mdash; extracted and visualised server log data with custom charting to analyse user behaviour patterns and assist in website optimisation.</p>
 											</div>
 										</div>
 									</article>
 
 									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-3">
-												<i class="icon-pen2"></i>
-											</div>
+											<div class="timeline-icon color-3"><i class="icon-pen2"></i></div>
 											<div class="timeline-label">
-												<h2><a href="https://github.com/codekali/diabetes_prediction">Diabetes
-														Prediction Model</a> <span>Dec 2019 - Jan 2020</span></h2>
-												<p>Worked on building a Neural Network to predict the risk of obtaining
-													diabetes in future. The project is still under development as
-													there's shortage of the required dataset. </p>
+												<h2><a href="https://github.com/codekali/diabetes_prediction">Diabetes Prediction Model</a> <span>Dec 2019 &ndash; Jan 2020</span></h2>
+												<p>Built a Neural Network to predict the risk of developing diabetes using PyTorch, exploring deep learning classification techniques on medical datasets.</p>
 											</div>
 										</div>
 									</article>
 
-									<article class="timeline-entry begin animate-box"
-										data-animate-effect="fadeInBottom">
-										<div class="timeline-entry-inner">
-											<div class="timeline-icon color-none">
-											</div>
-										</div>
+									<article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+										<div class="timeline-entry-inner"><div class="timeline-icon color-none"></div></div>
 									</article>
+
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
+				<!-- CERTIFICATIONS & EXTRACURRICULARS -->
+				<section class="colorlib-education" data-section="certifications" style="background:#f9f9f9;">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Learning &amp; Achievements</span>
+								<h2 class="colorlib-heading animate-box">Certifications &amp; Extracurriculars</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<div class="fancy-collapse-panel">
+									<div class="panel-group" id="accordionCerts" role="tablist" aria-multiselectable="true">
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="certHeadOne">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordionCerts" href="#certCollapseOne" aria-expanded="true" aria-controls="certCollapseOne">
+														<i class="fas fa-certificate" style="margin-right:8px;color:teal;"></i> Deep Learning Specialization &mdash; DeepLearning.ai (Coursera)
+													</a>
+												</h4>
+											</div>
+											<div id="certCollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="certHeadOne">
+												<div class="panel-body">
+													<p>Completed the full Deep Learning Specialization by Andrew Ng on Coursera, covering neural networks, CNNs, sequence models, and structuring ML projects.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="certHeadTwo">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordionCerts" href="#certCollapseTwo" aria-expanded="false" aria-controls="certCollapseTwo">
+														<i class="fas fa-certificate" style="margin-right:8px;color:teal;"></i> PHP &amp; MySQL Full-Stack Certification
+													</a>
+												</h4>
+											</div>
+											<div id="certCollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="certHeadTwo">
+												<div class="panel-body">
+													<p>Certified in full-stack web development with PHP and MySQL, covering server-side scripting, database design, and dynamic web applications.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="certHeadThree">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordionCerts" href="#certCollapseThree" aria-expanded="false" aria-controls="certCollapseThree">
+														<i class="fas fa-certificate" style="margin-right:8px;color:teal;"></i> Angular &amp; Ionic Certification
+													</a>
+												</h4>
+											</div>
+											<div id="certCollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="certHeadThree">
+												<div class="panel-body">
+													<p>Certified in building modern web and hybrid mobile applications using Angular and Ionic frameworks.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="certHeadFour">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordionCerts" href="#certCollapseFour" aria-expanded="false" aria-controls="certCollapseFour">
+														<i class="fas fa-laptop-code" style="margin-right:8px;color:teal;"></i> AMUNotes &mdash; Co-creator &amp; Contributor
+													</a>
+												</h4>
+											</div>
+											<div id="certCollapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="certHeadFour">
+												<div class="panel-body">
+													<p>Part of the AMUNotes platform — a class notes and reading material website built for students of Aligarh Muslim University. Contributed to development and content organisation to help peers access structured study material.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="certHeadFive">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordionCerts" href="#certCollapseFive" aria-expanded="false" aria-controls="certCollapseFive">
+														<i class="fas fa-rocket" style="margin-right:8px;color:teal;"></i> Strategic Vibe Coding
+													</a>
+												</h4>
+											</div>
+											<div id="certCollapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="certHeadFive">
+												<div class="panel-body">
+													<p>Engaged in Strategic Vibe Coding — a focused and intentional approach to software development that blends technical discipline with creative problem-solving to build impactful, well-crafted solutions.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="certHeadSix">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordionCerts" href="#certCollapseSix" aria-expanded="false" aria-controls="certCollapseSix">
+														<i class="fas fa-basketball-ball" style="margin-right:8px;color:teal;"></i> Hostel Basketball Captain
+													</a>
+												</h4>
+											</div>
+											<div id="certCollapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="certHeadSix">
+												<div class="panel-body">
+													<p>Served as Hostel Basketball Captain in the final year of college at Aligarh Muslim University, leading the team in inter-hostel competitions.</p>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- CONTACT -->
 				<section class="colorlib-contact" data-section="contact">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 								<span class="heading-meta">Get in Touch</span>
 								<h2 class="colorlib-heading">Contact</h2>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-5">
-								<div class="colorlib-feature colorlib-feature-sm animate-box"
-									data-animate-effect="fadeInLeft">
+								<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 									<div class="colorlib-icon" style="padding-top: 1em;">
 										<i class="fas fa-4x fa-envelope"></i>
 									</div>
 									<div class="colorlib-text">
-										<p><a href="mailto:jawwadayyubi15@gmail.com">jawwadayyubi15@gmail.com</a></p>
+										<p><a href="mailto:jawwadayyubi15@gmail.com"><span class="__cf_email__">jawwadayyubi15@gmail.com</span></a></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInRight">
+									<div class="colorlib-icon" style="padding-top: 1em;">
+										<i class="fab fa-4x fa-linkedin"></i>
+									</div>
+									<div class="colorlib-text">
+										<p><a href="https://www.linkedin.com/in/jawwad-ayyubi" target="_blank">linkedin.com/in/jawwad-ayyubi-/</a></p>
 									</div>
 								</div>
 							</div>
@@ -670,25 +875,15 @@
 		</div><!-- end:container-wrap -->
 	</div><!-- end:colorlib-page -->
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
 	<script src="js/owl.carousel.min.js"></script>
-	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
-
 	<script src="js/fontawesome.min.js"></script>
-	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
 
 </body>
-
 </html>
