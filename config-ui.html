@@ -1,0 +1,744 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Codekali.Net.Config.UI — .NET appsettings Management UI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Codekali.Net.Config.UI — A plug-and-play .NET 8 library that provides a browser-based GUI for managing appsettings.json in any ASP.NET Core solution." />
+	<meta name="keywords" content="codekali, nuget, appsettings, configuration, .NET, ASP.NET Core, devtools, config UI" />
+	<meta name="author" content="Jawwad A. Ayyubi" />
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<!-- Highlight.js for code blocks -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+	<style>
+		/* ===== GLOBAL ===== */
+		body { font-family: "Quicksand", Arial, sans-serif; color: #333; background: #fff; }
+
+		/* ===== TOP NAV ===== */
+		.pkg-topnav {
+			background: #0d1b2a;
+			padding: 14px 40px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: sticky;
+			top: 0;
+			z-index: 999;
+			border-bottom: 2px solid teal;
+		}
+		.pkg-topnav .brand {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			text-decoration: none;
+		}
+		.pkg-topnav .brand-icon {
+			width: 36px;
+			height: 36px;
+			background: teal;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			color: #fff;
+		}
+		.pkg-topnav .brand-name {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+		}
+		.pkg-topnav .brand-name span { color: teal; }
+		.pkg-topnav .nav-links { display: flex; gap: 24px; align-items: center; }
+		.pkg-topnav .nav-links a {
+			color: #a0b4c8;
+			font-size: 13px;
+			text-decoration: none;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			transition: color 0.2s;
+		}
+		.pkg-topnav .nav-links a:hover { color: teal; text-decoration: none; }
+		.pkg-topnav .btn-nuget {
+			background: teal;
+			color: #fff !important;
+			padding: 7px 18px;
+			border-radius: 4px;
+			font-size: 12px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			transition: background 0.2s;
+		}
+		.pkg-topnav .btn-nuget:hover { background: #007070 !important; }
+
+		/* ===== HERO ===== */
+		.pkg-hero {
+			background: linear-gradient(135deg, #0d1b2a 0%, #1b2a3b 55%, #0f2027 100%);
+			padding: 90px 40px 80px;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
+		.pkg-hero::before {
+            content: "";
+			position: absolute;
+			inset: 0;
+			background-image: radial-gradient(rgba(0,128,128,0.06) 1px, transparent 1px);
+			background-size: 40px 40px;
+            z-index: 0;
+		}
+		.pkg-hero .badge-version {
+			display: inline-block;
+			background: rgba(0,128,128,0.15);
+			border: 1px solid rgba(0,128,128,0.4);
+			color: teal;
+			font-size: 12px;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			padding: 5px 16px;
+			border-radius: 20px;
+			margin-bottom: 24px;
+		}
+		.pkg-hero h1 {
+			font-family: "Playfair Display", serif;
+			font-size: 48px;
+			font-weight: 700;
+			color: #fff;
+			margin: 0 0 16px;
+			position: relative;
+		}
+		.pkg-hero h1 span { color: teal; }
+		.pkg-hero .hero-sub {
+			font-size: 18px;
+			color: #a0b4c8;
+			max-width: 620px;
+			margin: 0 auto 36px;
+			line-height: 1.7;
+		}
+		.pkg-hero .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+		.pkg-hero .btn-primary-pkg {
+			background: teal;
+			color: #fff;
+			padding: 13px 32px;
+			border-radius: 4px;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			text-decoration: none;
+			transition: background 0.2s, transform 0.2s;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.pkg-hero .btn-primary-pkg:hover { background: #007070; transform: translateY(-2px); text-decoration: none; color: #fff; }
+		.pkg-hero .btn-outline-pkg {
+			background: transparent;
+			color: #a0b4c8;
+			padding: 12px 28px;
+			border-radius: 4px;
+			border: 1.5px solid rgba(160,180,200,0.4);
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			text-decoration: none;
+			transition: all 0.2s;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.pkg-hero .btn-outline-pkg:hover { border-color: teal; color: teal; text-decoration: none; }
+
+		/* ===== INSTALL STRIP ===== */
+		.install-strip {
+			background: #1b2a3b;
+			padding: 20px 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 16px;
+			flex-wrap: wrap;
+		}
+		.install-strip .install-label {
+			color: #a0b4c8;
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+		.install-strip .install-cmd {
+			background: #0d1b2a;
+			border: 1px solid rgba(0,128,128,0.3);
+			border-radius: 6px;
+			padding: 10px 20px;
+			color: teal;
+			font-family: monospace;
+			font-size: 14px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			transition: border-color 0.2s;
+		}
+		.install-strip .install-cmd:hover { border-color: teal; }
+		.install-strip .install-cmd .copy-btn {
+			color: #a0b4c8;
+			font-size: 13px;
+			cursor: pointer;
+			transition: color 0.2s;
+			background: none;
+			border: none;
+			padding: 0;
+		}
+		.install-strip .install-cmd .copy-btn:hover { color: teal; }
+
+		/* ===== FEATURES GRID ===== */
+		.pkg-section { padding: 70px 0; }
+		.pkg-section.alt-bg { background: #f8f9fa; }
+		.pkg-inner {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+		@media (max-width: 768px) {
+			.pkg-inner { padding: 0 20px; }
+		}
+		.pkg-section .section-label {
+			color: teal;
+			font-size: 11px;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			display: block;
+		}
+		.pkg-section h2 {
+			font-family: "Playfair Display", serif;
+			font-size: 32px;
+			font-weight: 700;
+			color: #0d1b2a;
+			margin-bottom: 12px;
+		}
+		.pkg-section .section-intro {
+			color: #666;
+			font-size: 16px;
+			line-height: 1.8;
+			max-width: 650px;
+			margin-bottom: 48px;
+		}
+
+		.features-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 24px;
+		}
+		.feature-card {
+			background: #fff;
+			border: 1px solid #e8edf2;
+			border-radius: 10px;
+			padding: 28px 24px;
+			transition: box-shadow 0.2s, transform 0.2s;
+			position: relative;
+			overflow: hidden;
+		}
+		.feature-card::before {
+			content: "";
+			position: absolute;
+			top: 0; left: 0; right: 0;
+			height: 3px;
+			background: teal;
+			transform: scaleX(0);
+			transition: transform 0.25s;
+		}
+		.feature-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.09); transform: translateY(-3px); }
+		.feature-card:hover::before { transform: scaleX(1); }
+		.feature-card .fc-icon {
+			width: 44px;
+			height: 44px;
+			background: rgba(0,128,128,0.1);
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 20px;
+			color: teal;
+			margin-bottom: 16px;
+		}
+		.feature-card h4 {
+			font-size: 15px;
+			font-weight: 700;
+			color: #0d1b2a;
+			margin-bottom: 8px;
+			font-family: "Quicksand", Arial, sans-serif;
+		}
+		.feature-card p {
+			font-size: 14px;
+			color: #666;
+			line-height: 1.7;
+			margin: 0;
+		}
+
+		/* ===== CODE TABS ===== */
+		.code-tabs { max-width: inherit; }
+		.tab-btns { display: flex; gap: 4px; margin-bottom: 0; flex-wrap: wrap; }
+		.tab-btn {
+			background: #e8edf2;
+			border: none;
+			padding: 9px 20px;
+			font-size: 12px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			color: #666;
+			border-radius: 6px 6px 0 0;
+			cursor: pointer;
+			transition: all 0.2s;
+		}
+		.tab-btn.active { background: #1b2a3b; color: teal; }
+		.tab-pane { display: none; }
+		.tab-pane.active { display: block; }
+		.tab-pane pre {
+			margin: 0;
+			border-radius: 0 6px 6px 6px;
+		}
+		.tab-pane pre code { font-size: 14px; line-height: 1.6; }
+
+		/* ===== OPTIONS TABLE ===== */
+		.options-table {
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 14px;
+		}
+		.options-table thead th {
+			background: #0d1b2a;
+			color: #a0b4c8;
+			padding: 12px 16px;
+			text-align: left;
+			font-size: 11px;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+		}
+		.options-table tbody tr { border-bottom: 1px solid #eef0f3; }
+		.options-table tbody tr:hover { background: #f8f9fa; }
+		.options-table tbody td { padding: 12px 16px; color: #444; vertical-align: top; }
+		.options-table .opt-name { font-family: monospace; color: teal; font-size: 13px; }
+		.options-table .opt-type { color: #888; font-family: monospace; font-size: 12px; }
+		.options-table .opt-default { font-family: monospace; font-size: 12px; background: #f0f4f8; padding: 2px 6px; border-radius: 3px; }
+
+		/* ===== SECURITY BOX ===== */
+		.security-box {
+			background: linear-gradient(135deg, #0d1b2a, #1b2a3b);
+			border-radius: 12px;
+			padding: 40px;
+			color: #a0b4c8;
+		}
+		.security-box h3 { color: teal; font-size: 20px; margin-bottom: 20px; font-family: "Quicksand", Arial, sans-serif; font-weight: 700; }
+		.security-box ul { padding-left: 20px; }
+		.security-box ul li { margin-bottom: 10px; line-height: 1.7; font-size: 15px; }
+		.security-box ul li strong { color: #fff; }
+
+		/* ===== VERSIONS TABLE ===== */
+		.versions-table {
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 14px;
+		}
+		.versions-table thead th {
+			background: #0d1b2a;
+			color: #a0b4c8;
+			padding: 10px 16px;
+			text-align: left;
+			font-size: 11px;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+		}
+		.versions-table tbody tr { border-bottom: 1px solid #eef0f3; }
+		.versions-table tbody td { padding: 12px 16px; color: #444; }
+		.versions-table .v-badge {
+			background: rgba(0,128,128,0.1);
+			color: teal;
+			padding: 3px 10px;
+			border-radius: 12px;
+			font-size: 12px;
+			font-weight: 600;
+			font-family: monospace;
+		}
+		.versions-table .v-latest {
+			background: teal;
+			color: #fff;
+		}
+
+		/* ===== FOOTER ===== */
+		.pkg-footer {
+			background: #0d1b2a;
+			padding: 32px 40px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 16px;
+			border-top: 1px solid #1b2a3b;
+		}
+		.pkg-footer .footer-left { color: #a0b4c8; font-size: 13px; }
+		.pkg-footer .footer-left a { color: teal; text-decoration: none; }
+		.pkg-footer .footer-right { display: flex; gap: 16px; }
+		.pkg-footer .footer-right a {
+			color: #a0b4c8;
+			font-size: 13px;
+			text-decoration: none;
+			transition: color 0.2s;
+		}
+		.pkg-footer .footer-right a:hover { color: teal; }
+
+		/* responsive */
+		@media (max-width: 768px) {
+			.pkg-topnav { padding: 12px 20px; }
+			.pkg-topnav .nav-links { display: none; }
+			.pkg-hero { padding: 60px 20px 50px; }
+			.pkg-hero h1 { font-size: 32px; }
+			.pkg-section { padding: 50px 0; }
+			.install-strip { padding: 16px 20px; }
+			.pkg-footer { flex-direction: column; padding: 24px 20px; }
+		}
+	</style>
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+
+	<!-- TOP NAV -->
+	<nav class="pkg-topnav">
+		<a href="index.html" class="brand">
+			<div class="brand-icon"><i class="fas fa-cog"></i></div>
+			<span class="brand-name">Codekali.<span>Net</span>.Config.UI</span>
+		</a>
+		<div class="nav-links">
+			<a href="#features">Features</a>
+			<a href="#quickstart">Quick Start</a>
+			<a href="#configuration">Configuration</a>
+			<a href="#security">Security</a>
+			<a href="#versions">Versions</a>
+			<a href="https://github.com/Codekali/Codekali.Net.Config.UI" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+			<a href="https://www.nuget.org/packages/Codekali.Net.Config.UI" target="_blank" class="btn-nuget"><i class="fas fa-box"></i> NuGet</a>
+		</div>
+	</nav>
+
+	<!-- HERO -->
+	<section class="pkg-hero">
+		<span class="badge-version">v1.1.5 &nbsp;&bull;&nbsp; MIT License &nbsp;&bull;&nbsp; .NET 8 &amp; .NET Standard 2.1</span>
+		<h1>Codekali.<span>Net</span>.Config.UI</h1>
+		<p class="hero-sub">A plug-and-play .NET 8 library that provides a browser-based GUI for managing <code style="background:rgba(0,128,128,0.15);color:teal;padding:2px 8px;border-radius:4px;">appsettings.json</code> files in any ASP.NET Core solution. No setup, no bloat.</p>
+		<div class="hero-actions">
+			<a href="#quickstart" class="btn-primary-pkg"><i class="fas fa-rocket"></i> Get Started</a>
+			<a href="https://www.nuget.org/packages/Codekali.Net.Config.UI" target="_blank" class="btn-outline-pkg"><i class="fas fa-box-open"></i> View on NuGet</a>
+			<a href="https://github.com/Codekali/Codekali.Net.Config.UI" target="_blank" class="btn-outline-pkg"><i class="fab fa-github"></i> Source Code</a>
+		</div>
+	</section>
+
+	<!-- INSTALL STRIP -->
+	<div class="install-strip">
+		<span class="install-label">.NET CLI</span>
+		<div class="install-cmd" onclick="copyCmd(this, 'dotnet add package Codekali.Net.Config.UI --version 1.1.5')">
+			<span class="cmd-text">dotnet add package Codekali.Net.Config.UI --version 1.1.5</span>
+			<button class="copy-btn" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
+		</div>
+	</div>
+
+	<!-- FEATURES -->
+	<section class="pkg-section" id="features">
+		<div class="pkg-inner">
+			<span class="section-label">What's included</span>
+			<h2>Everything you need to manage config</h2>
+			<p class="section-intro">A full-featured UI embedded directly in your ASP.NET Core app — no external services, no dashboards, no configuration required to get started.</p>
+
+			<div class="features-grid">
+				<div class="feature-card animate-box" data-animate-effect="fadeInLeft">
+					<div class="fc-icon"><i class="fas fa-folder-tree"></i></div>
+					<h4>Tree View Editor</h4>
+					<p>Expand, edit, add, and delete keys inline with full nested object and array support. Works on any depth of JSON.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInLeft">
+					<div class="fc-icon"><i class="fas fa-code"></i></div>
+					<h4>Monaco Raw JSON Editor</h4>
+					<p>Powered by the VS Code engine — syntax highlighting, bracket matching, and <kbd>Ctrl+S</kbd> to save directly from the editor.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInLeft">
+					<div class="fc-icon"><i class="fas fa-comment-slash"></i></div>
+					<h4>Comment Preservation</h4>
+					<p><code>//</code> and <code>/* */</code> comments survive every save operation — in both the tree view and raw editor.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInRight">
+					<div class="fc-icon"><i class="fas fa-list-ol"></i></div>
+					<h4>Array Editing</h4>
+					<p>Expand arrays, append new items, remove items by index, and update values — all from the browser UI.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInRight">
+					<div class="fc-icon"><i class="fas fa-exchange-alt"></i></div>
+					<h4>Move / Copy Between Environments</h4>
+					<p>Swap configuration keys between <code>appsettings.json</code>, <code>appsettings.Development.json</code>, and any other environment file.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInRight">
+					<div class="fc-icon"><i class="fas fa-columns"></i></div>
+					<h4>Side-by-Side Diff</h4>
+					<p>Compare any two environment files visually, side by side, to spot differences at a glance.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInLeft">
+					<div class="fc-icon"><i class="fas fa-eye-slash"></i></div>
+					<h4>Sensitive Value Masking</h4>
+					<p>Keys containing <code>password</code>, <code>secret</code>, <code>token</code>, or <code>apikey</code> are automatically masked in the UI.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInLeft">
+					<div class="fc-icon"><i class="fas fa-bell"></i></div>
+					<h4>Hot Reload Detection</h4>
+					<p>A dismissible banner notifies you when a config file changes externally while the UI is open.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInRight">
+					<div class="fc-icon"><i class="fas fa-moon"></i></div>
+					<h4>Dark / Light Mode</h4>
+					<p>Toggle between dark and light themes. Your preference is remembered across sessions.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInRight">
+					<div class="fc-icon"><i class="fas fa-search"></i></div>
+					<h4>Auto-detect Config Files</h4>
+					<p>Automatically discovers all <code>appsettings*.json</code> files in your solution at runtime — no manual registration.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInLeft">
+					<div class="fc-icon"><i class="fas fa-save"></i></div>
+					<h4>Explicit Save Only</h4>
+					<p>Never auto-saves. All changes require a deliberate save action, giving you full control over when changes are applied.</p>
+				</div>
+				<div class="feature-card animate-box" data-animate-effect="fadeInRight">
+					<div class="fc-icon"><i class="fas fa-lock"></i></div>
+					<h4>Development-Only by Default</h4>
+					<p>The middleware returns 404 in production unless explicitly enabled, so it never leaks its existence to the public.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- QUICK START -->
+	<section class="pkg-section alt-bg" id="quickstart">
+		<div class="pkg-inner">
+			<span class="section-label">Get up and running</span>
+			<h2>Quick Start</h2>
+			<p class="section-intro">Three lines of code and you're done. Open your browser and manage your config.</p>
+
+			<div class="code-tabs">
+				<div class="tab-btns">
+					<button class="tab-btn active" onclick="switchTab(event, 'tab-dotnet')">dotnet CLI</button>
+					<button class="tab-btn" onclick="switchTab(event, 'tab-pmc')">Package Manager</button>
+					<button class="tab-btn" onclick="switchTab(event, 'tab-ref')">PackageReference</button>
+				</div>
+
+				<div id="tab-dotnet" class="tab-pane active">
+					<pre><code class="language-bash">dotnet add package Codekali.Net.Config.UI --version 1.1.5</code></pre>
+				</div>
+				<div id="tab-pmc" class="tab-pane">
+					<pre><code class="language-powershell">NuGet\Install-Package Codekali.Net.Config.UI -Version 1.1.5</code></pre>
+				</div>
+				<div id="tab-ref" class="tab-pane">
+					<pre><code class="language-xml">&lt;PackageReference Include="Codekali.Net.Config.UI" Version="1.1.5" /&gt;</code></pre>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="code-tabs" style="margin-top:32px;">
+				<div class="tab-btns">
+					<button class="tab-btn active" onclick="switchTab(event, 'tab-register')">1. Register</button>
+					<button class="tab-btn" onclick="switchTab(event, 'tab-middleware')">2. Middleware</button>
+					<button class="tab-btn" onclick="switchTab(event, 'tab-browse')">3. Open Browser</button>
+				</div>
+				<div id="tab-register" class="tab-pane active">
+					<pre><code class="language-csharp">// Program.cs
+builder.Services.AddConfigUI();</code></pre>
+				</div>
+				<div id="tab-middleware" class="tab-pane">
+					<pre><code class="language-csharp">// Program.cs
+app.UseConfigUI();</code></pre>
+				</div>
+				<div id="tab-browse" class="tab-pane">
+					<pre><code class="language-bash">https://localhost:5001/config-ui</code></pre>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CONFIGURATION -->
+	<section class="pkg-section" id="configuration">
+		<div class="pkg-inner">
+			<span class="section-label">Options</span>
+			<h2>Configuration Reference</h2>
+			<p class="section-intro">All options are optional. Pass them to <code>AddConfigUI()</code> to customise behaviour.</p>
+
+			<div class="code-tabs" style="margin-bottom:40px;">
+				<div class="tab-btns">
+					<button class="tab-btn active" onclick="switchTab(event, 'tab-fullopts')">Full Options</button>
+					<button class="tab-btn" onclick="switchTab(event, 'tab-authpolicy')">Auth Policy</button>
+					<button class="tab-btn" onclick="switchTab(event, 'tab-autotoken')">Auto Token</button>
+				</div>
+				<div id="tab-fullopts" class="tab-pane active">
+					<pre><code class="language-csharp">builder.Services.AddConfigUI(options =>
+{
+    options.PathPrefix              = "/config-ui";          // Configurable to any path prefix you like (e.g. "/admin/config", etc.)
+    options.AccessToken             = "your-secret-token";   // simple token auth
+    options.AuthorizationPolicy     = "ConfigUIAccess";       // ASP.NET Core policy
+    options.AllowedEnvironments     = ["Development", "Staging"];
+    options.MaskSensitiveValues     = true;
+    options.ReadOnly                = false;
+    options.EnableAutoToken         = false;                  // auto-generate token on first run
+    options.EnableHotReloadDetection = true;
+    options.ConfigDirectory         = null;                   // defaults to CWD
+});</code></pre>
+				</div>
+				<div id="tab-authpolicy" class="tab-pane">
+					<pre><code class="language-csharp">builder.Services.AddAuthorization(o =>
+    o.AddPolicy("ConfigUIAccess", p => p.RequireRole("Admin")));
+
+app.UseConfigUI();</code></pre>
+				</div>
+				<div id="tab-autotoken" class="tab-pane">
+					<pre><code class="language-csharp">// Auto-generate token on first run
+// Written to Properties/launchSettings.json as CONFIGUI_ACCESS_TOKEN
+builder.Services.AddConfigUI(options =>
+    options.EnableAutoToken = true);
+
+// Access via header:
+// X-Config-Token: &lt;generated-token&gt;
+// Or query string:
+// /config-ui?token=&lt;generated-token&gt;</code></pre>
+				</div>
+			</div>
+
+			<table class="options-table">
+				<thead>
+					<tr>
+						<th>Option</th>
+						<th>Type</th>
+						<th>Default</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td class="opt-name">PathPrefix</td><td class="opt-type">string</td><td><span class="opt-default">"/config-ui"</span></td><td>URL path where the UI is served. Configurable to any path prefix you like (e.g. <code>"/admin/config"</code>, <code>"/settings"</code>, <code>"/configuration"</code> etc.)</td></tr>
+					<tr><td class="opt-name">AccessToken</td><td class="opt-type">string?</td><td><span class="opt-default">null</span></td><td>Simple bearer token. Pass via header <code>X-Config-Token</code> or query string <code>?token=</code>.</td></tr>
+					<tr><td class="opt-name">AuthorizationPolicy</td><td class="opt-type">string?</td><td><span class="opt-default">null</span></td><td>ASP.NET Core authorization policy name to enforce on the UI route.</td></tr>
+					<tr><td class="opt-name">AllowedEnvironments</td><td class="opt-type">string[]</td><td><span class="opt-default">["Development"]</span></td><td>Environments where the UI is accessible. Returns 404 in all others.</td></tr>
+					<tr><td class="opt-name">MaskSensitiveValues</td><td class="opt-type">bool</td><td><span class="opt-default">true</span></td><td>Masks keys containing <em>password, secret, token, apikey</em> in the UI.</td></tr>
+					<tr><td class="opt-name">ReadOnly</td><td class="opt-type">bool</td><td><span class="opt-default">false</span></td><td>Disables all write operations — UI becomes read-only.</td></tr>
+					<tr><td class="opt-name">EnableAutoToken</td><td class="opt-type">bool</td><td><span class="opt-default">false</span></td><td>Auto-generates an access token on first run and persists it to <code>launchSettings.json</code>.</td></tr>
+					<tr><td class="opt-name">EnableHotReloadDetection</td><td class="opt-type">bool</td><td><span class="opt-default">true</span></td><td>Shows a banner when a config file changes externally while the UI is open.</td></tr>
+					<tr><td class="opt-name">ConfigDirectory</td><td class="opt-type">string?</td><td><span class="opt-default">null</span></td><td>Root directory to scan for <code>appsettings*.json</code>. Defaults to current working directory.</td></tr>
+				</tbody>
+			</table>
+
+			<div style="background:#fff9e6;border-left:4px solid #f9bf3f;border-radius:0 6px 6px 0;padding:18px 24px;margin-top:32px;">
+				<strong style="color:#b8860b;"><i class="fas fa-exclamation-triangle" style="margin-right:8px;"></i>IOptions Reload Guidance</strong>
+				<p style="margin:8px 0 0;font-size:14px;color:#666;line-height:1.7;">Changes written by the Config UI take effect at runtime only when consuming code uses <code>IOptionsSnapshot&lt;T&gt;</code> (per-request) or <code>IOptionsMonitor&lt;T&gt;</code> (singleton-safe) — not <code>IOptions&lt;T&gt;</code>, which snapshots values at startup.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- SECURITY -->
+	<section class="pkg-section alt-bg" id="security">
+		<div class="pkg-inner">
+			<span class="section-label">Stay safe</span>
+			<h2>Security</h2>
+			<p class="section-intro">Designed to be safe by default — the UI is invisible in production unless you explicitly open it up.</p>
+			<div class="security-box animate-box" data-animate-effect="fadeInLeft">
+				<h3><i class="fas fa-shield-alt" style="margin-right:10px;"></i>Security Best Practices</h3>
+				<ul>
+					<li>The middleware returns <strong>404</strong> outside allowed environments — it does not reveal its existence.</li>
+					<li>Always set <strong>AllowedEnvironments</strong> explicitly when enabling beyond Development.</li>
+					<li>Always set an <strong>AccessToken</strong> or <strong>AuthorizationPolicy</strong> for any non-local access.</li>
+					<li>Consider putting the path behind a <strong>VPN or internal network</strong> in staging environments.</li>
+					<li>Sensitive keys (<code>password</code>, <code>secret</code>, <code>token</code>, <code>apikey</code>) are <strong>automatically masked</strong> in the UI by default.</li>
+					<li>Token can be passed via <strong>Header</strong> <code>X-Config-Token</code> or <strong>Query string</strong> <code>?token=</code>.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- VERSIONS -->
+	<section class="pkg-section" id="versions">
+		<div class="pkg-inner">
+			<span class="section-label">Release history</span>
+			<h2>Versions</h2>
+			<p class="section-intro">Published on NuGet. MIT licensed.</p>
+			<table class="versions-table animate-box" data-animate-effect="fadeInLeft">
+				<thead>
+					<tr><th>Version</th><th>Released</th><th>Highlights</th></tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="v-badge v-latest">1.1.5</span></td>
+						<td>Apr 5, 2026</td>
+						<td>Monaco editor, comment preservation, array support, hot reload detection, auto-token, ASP.NET Core auth policy, CSS/JS minification.</td>
+					</tr>
+					<tr>
+						<td><span class="v-badge">1.0.1</span></td>
+						<td>Apr 5, 2026</td>
+						<td>Initial release. Tree view editor, sensitive value masking, dark/light mode, development-only middleware.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="pkg-footer">
+		<div class="footer-left">
+			Built by <a href="index.html">Jawwad A. Ayyubi</a> &nbsp;&bull;&nbsp;
+			<a href="https://www.nuget.org/packages/Codekali.Net.Config.UI" target="_blank">NuGet</a> &nbsp;&bull;&nbsp;
+			<a href="https://github.com/Codekali/Codekali.Net.Config.UI" target="_blank">GitHub</a> &nbsp;&bull;&nbsp;
+			MIT License
+		</div>
+		<div class="footer-right">
+			<a href="index.html"><i class="fas fa-arrow-left" style="margin-right:6px;"></i>Back to Portfolio</a>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		hljs.highlightAll();
+
+		function switchTab(e, id) {
+			var parent = e.target.closest(".code-tabs") || e.target.parentElement.parentElement;
+			parent.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+			parent.querySelectorAll(".tab-pane").forEach(p => p.classList.remove("active"));
+			e.target.classList.add("active");
+			document.getElementById(id).classList.add("active");
+		}
+
+		function copyCmd(el, text) {
+			navigator.clipboard.writeText(text).then(function() {
+				var btn = el.querySelector(".copy-btn");
+				btn.innerHTML = '<i class="fas fa-check"></i>';
+				setTimeout(function() { btn.innerHTML = '<i class="fas fa-copy"></i>'; }, 2000);
+			});
+		}
+	</script>
+</body>
+</html>
