@@ -50,13 +50,12 @@
 		.pkg-topnav .brand-icon {
 			width: 36px;
 			height: 36px;
-			background: teal;
-			border-radius: 8px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-size: 18px;
-			color: #fff;
+			background:transparent;
+			padding:0;
+			overflow:hidden;
 		}
 		.pkg-topnav .brand-name {
 			color: #fff;
@@ -94,7 +93,7 @@
 			padding: 90px 40px 80px;
 			text-align: center;
 			position: relative;
-			overflow: hidden;
+			overflow: hidden;    
 		}
 		.pkg-hero::before {
             content: "";
@@ -426,7 +425,9 @@
 	<!-- TOP NAV -->
 	<nav class="pkg-topnav">
 		<a href="index.html" class="brand">
-			<div class="brand-icon"><i class="fas fa-cog"></i></div>
+			<div class="brand-icon">
+				<img src="../images/new - icon.png" alt="Config.UI" style="width:36px;height:36px;object-fit:cover;border-radius:8px;">
+			</div>
 			<span class="brand-name">Codekali.<span>Net</span>.Config.UI</span>
 		</a>
 		<div class="nav-links">
@@ -442,7 +443,7 @@
 
 	<!-- HERO -->
 	<section class="pkg-hero">
-		<span class="badge-version">v1.1.5 &nbsp;&bull;&nbsp; MIT License &nbsp;&bull;&nbsp; .NET 8 &amp; .NET Standard 2.1</span>
+		<span class="badge-version">v1.1.6 &nbsp;&bull;&nbsp; MIT License &nbsp;&bull;&nbsp; .NET 8 &amp; .NET Standard 2.1</span>
 		<h1>Codekali.<span>Net</span>.Config.UI</h1>
 		<p class="hero-sub">A plug-and-play .NET 8 library that provides a browser-based GUI for managing <code style="background:rgba(0,128,128,0.15);color:teal;padding:2px 8px;border-radius:4px;">appsettings.json</code> files in any ASP.NET Core solution. No setup, no bloat.</p>
 		<div class="hero-actions">
@@ -455,8 +456,8 @@
 	<!-- INSTALL STRIP -->
 	<div class="install-strip">
 		<span class="install-label">.NET CLI</span>
-		<div class="install-cmd" onclick="copyCmd(this, 'dotnet add package Codekali.Net.Config.UI --version 1.1.5')">
-			<span class="cmd-text">dotnet add package Codekali.Net.Config.UI --version 1.1.5</span>
+		<div class="install-cmd" onclick="copyCmd(this, 'dotnet add package Codekali.Net.Config.UI --version 1.1.6')">
+			<span class="cmd-text">dotnet add package Codekali.Net.Config.UI --version 1.1.6</span>
 			<button class="copy-btn" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
 		</div>
 	</div>
@@ -548,13 +549,13 @@
 				</div>
 
 				<div id="tab-dotnet" class="tab-pane active">
-					<pre><code class="language-bash">dotnet add package Codekali.Net.Config.UI --version 1.1.5</code></pre>
+					<pre><code class="language-bash">dotnet add package Codekali.Net.Config.UI --version 1.1.6</code></pre>
 				</div>
 				<div id="tab-pmc" class="tab-pane">
-					<pre><code class="language-powershell">NuGet\Install-Package Codekali.Net.Config.UI -Version 1.1.5</code></pre>
+					<pre><code class="language-powershell">NuGet\Install-Package Codekali.Net.Config.UI -Version 1.1.6</code></pre>
 				</div>
 				<div id="tab-ref" class="tab-pane">
-					<pre><code class="language-xml">&lt;PackageReference Include="Codekali.Net.Config.UI" Version="1.1.5" /&gt;</code></pre>
+					<pre><code class="language-xml">&lt;PackageReference Include="Codekali.Net.Config.UI" Version="1.1.6" /&gt;</code></pre>
 				</div>
 			</div>
 
@@ -688,7 +689,7 @@ builder.Services.AddConfigUI(options =>
 				</thead>
 				<tbody>
 					<tr>
-						<td><span class="v-badge v-latest">1.1.5</span></td>
+						<td><span class="v-badge v-latest">1.1.6</span></td>
 						<td>Apr 5, 2026</td>
 						<td>Monaco editor, comment preservation, array support, hot reload detection, auto-token, ASP.NET Core auth policy, CSS/JS minification.</td>
 					</tr>
@@ -711,7 +712,7 @@ builder.Services.AddConfigUI(options =>
 			MIT License
 		</div>
 		<div class="footer-right">
-			<a href="index.html"><i class="fas fa-arrow-left" style="margin-right:6px;"></i>Back to Portfolio</a>
+			<a href="../index.html"><i class="fas fa-arrow-left" style="margin-right:6px;"></i>Back to Portfolio</a>
 		</div>
 	</footer>
 
